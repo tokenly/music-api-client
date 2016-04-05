@@ -1,5 +1,5 @@
 {
-    "name": "tokenly/music-client",
+    "name": "tokenly/music-api-client",
     "description": "A client to call the Tokenly Music APIs",
     "keywords": ["tokenly","music","api","client"],
     "type": "library",
