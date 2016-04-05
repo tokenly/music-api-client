@@ -1,19 +1,20 @@
 # Tokenly Music API client.
 
-Use this client for the Tokenly Music API.
+Use this client to call the Tokenly Music API.
+
+[![Build Status](https://travis-ci.org/tokenly/music-api-client.svg.svg?branch=master)](https://travis-ci.org/tokenly/music-api-client.svg)
 
 
 # Installation
 
-
 ### Add the package via composer
 
-```
+```bash
 composer require tokenly/music-client
 ```
 
 
-### Create a new client
+### Create and use the API client
 
 ```php
 // login with the public API client
@@ -23,8 +24,8 @@ $user_details = $public_music_api->login('myusername', 'mypassword');
 $client_id = $user_details['apiToken'];
 $secret_key = $user_details['apiSecretKey'];
 
-// now use the protected API client
-$tokenly_api = new Tokenly\APIClient\TokenlyAPI('https://music.tokenly.com/api/v1', new Tokenly\HmacAuth\Generator(), $client_id, $secret_key);
-$music_api = new MusicAPI($public_tokenly_api);
+// Once you have the client id and key, you can use the protected API client to call protected methods
+$protected_tokenly_api = new Tokenly\APIClient\TokenlyAPI('https://music.tokenly.com/api/v1', new Tokenly\HmacAuth\Generator(), $client_id, $secret_key);
+$music_api = new MusicAPI($protected_tokenly_api);
 $songs_array = $music_api->get('music/music/mysongs');
 ```
