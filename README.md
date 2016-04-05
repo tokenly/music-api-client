@@ -2,7 +2,7 @@
 
 Use this client to call the Tokenly Music API.
 
-[![Build Status](https://travis-ci.org/tokenly/music-api-client.svg.svg?branch=master)](https://travis-ci.org/tokenly/music-api-client.svg)
+[![Build Status](https://travis-ci.org/tokenly/music-api-client.svg?branch=master)](https://travis-ci.org/tokenly/music-api-client.svg)
 
 
 # Installation
